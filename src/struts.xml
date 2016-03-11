@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="utf-8"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />      
+     <package name="user" namespace="/user" extends="struts-default">
+	        <action name="user_*" class="userAction" method="{1}">
+	        	<result name="message">/message.jsp</result> 
+	        	<result name="su_reg">/suc_register.jsp</result>
+	        	<result name="show_view">/myInfo.jsp</result>  
+	        	<result name="show_edit">/stu_edit.jsp</result>
+	        	<result name="index">/index.jsp</result>     
+	        	<result name="input">/stu_login.jsp</result>
+	        </action>  
+	 </package>
+	 <package name="book" namespace="/book" extends="struts-default">
+	        <action name="book_*" class="bookAction" method="{1}">
+	           <result name="book_register">/book_register.jsp</result>
+	           <result name="su_reg">/suc_bRegister.jsp</result>
+	           <result name="show_bookInfo">/book_info.jsp</result>
+	           <result name="show_edit">/book_edit.jsp</result>
+	           <result name="show_MyBook">/myBookList.jsp</result>
+	           <result name="delete_book">/suc_delete.jsp</result>
+	        </action>
+	 </package>
+	  <package name="order" namespace="/order" extends="struts-default">
+	        <action name="order_*" class="orderAction" method="{1}">
+	           <result name="add_order">/suc_addOrder.jsp</result>
+	           <result name="show_view">/order_view.jsp</result>
+	        </action>
+	  </package>
+</struts>
