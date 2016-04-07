@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>My JSP 'login.jsp' starting page</title>
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -28,20 +28,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@include file="menubar.jsp"%>	                
     </header>
     <main>
-    <s:form action="" method="post" cssClass="form-inline" role="form">
-		  
+    <s:form action="book/book_queryBooks" method="post" cssClass="form-inline" role="form">
+      		<div class="form-group pull-right mr200">
+                <input class="search-field form-control input-sm" title="关键词" name="keyName" placeholder="输入关键词...">
+                <button class="btn btn-info btn-sm" type="submit">搜  索</button>
+              </div> 
+         
 	      <ul> 
 	      	<s:iterator value="bookList" status="status">
 	      	
 	          <li>
 	          	<img src="<%=basePath%>images/<s:property value='img'/>">
 	          	<p>
-	          		<a href="book/book_showBookEdit?book.id=<s:property value='id'/>">
+	          		<a href="book/book_showBookInfo?book.id=<s:property value='id'/>">
 	          			<s:property value="bookname"/>
 	          		</a>
 	          		<span class="price">&yen;<s:property value="credit"/></span>
-	          		&nbsp;&nbsp;&nbsp;&nbsp;<a href="book/book_showBookEdit?book.id=<s:property value='id'/>">
+	          		&nbsp;&nbsp;&nbsp;&nbsp;
+	          		<%-- <a href="book/book_showBookEdit?book.id=<s:property value='id'/>">
 	          		<i class="fa fa-pencil"></i> 
+	          		</a> --%>
+	          		<a href="order/order_addOrder?book.id=<s:property value='id'/>&user.id=${user.id}">
+	          		<i class="fa fa-plus"></i> 
 	          		</a>
 	          	</p>
 	          </li>

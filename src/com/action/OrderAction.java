@@ -53,7 +53,8 @@ public class OrderAction {
 	}
 	//添加订单
 	public String addOrder() throws Exception{
-		user=userDao.GetUserById(user.getId());//首页穿id进来
+		System.out.println(user.getId()+" "+book.getId());
+		user=userDao.GetUserById(user.getId());//首页传id进来
 		book=bookDao.GetBookById(book.getId());
 		Shoporder ord=new Shoporder();
 	    ord.setBook(book);
@@ -82,5 +83,31 @@ public class OrderAction {
 		orderList=orderDao.QueryOrderInfo(user,book);
 		return "show_view";
 	}
+	 /*显示某一Order的详细信息*/
+    public String showDetail() {
+    	System.out.print(order.getId());
+    	order = orderDao.GetOrderById(order.getId());
+        return "detail_view";
+    }
+    
+    /*显示Order的修改项*/
+    /*public String showEdit() throws Exception {
+    	order = orderDao.GetOrderById(order.getOrderid());
+        return "edit_view";
+    }*/
+
+    /*编辑Order*/
+    /*public String editOrder() throws Exception {
+    	orderDao.UpdateOrder(order);
+        return "edit_message";
+    }*/
+    
+    /*删除Order*/
+    /*public String deleteOrder() throws Exception {
+    	orderDao.DeleteOrder(food.getFoodid());
+        return "delete_message";
+    }*/
+    
+    
 
 }

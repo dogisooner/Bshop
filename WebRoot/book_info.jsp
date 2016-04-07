@@ -29,7 +29,7 @@
 	<header> <%@include file="menubar.jsp"%>
 	</header>
 	<div class="re_main">
-           <h3>我的账户</h3>
+           <h3>------&nbsp;<c:out value="${book.bookname}"></c:out>&nbsp;------</h3>
               <s:form action="user/user_login" method="post">         
                 <div id="showInfo">
 		        <a href="book/book_showBookEdit?book.id=${book.id}"><i class="fa fa-edit" style="color:#02ba85;">编辑信息</i></a><br><br>

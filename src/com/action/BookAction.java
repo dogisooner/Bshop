@@ -18,6 +18,14 @@ import com.service.BookServiceImpl;
 @Service@Transactional
 @Controller@Scope("prototype")
 public class BookAction{
+	String keyName;
+	
+	public String getKeyName() {
+		return keyName;
+	}
+	public void setKeyName(String keyName) {
+		this.keyName = keyName;
+	}
 	@Resource BookServiceImpl bookService;
 	private Book book;
 	
@@ -81,4 +89,10 @@ public class BookAction{
 		bookService.delete(book);
 		return "delete_book";
 	}
+	/*≤È—Øbook*/
+    public String queryBooks() throws Exception {
+    	bookList = bookService.queryBooks(keyName);
+    	System.out.println(keyName);
+        return "index";
+    }
 }

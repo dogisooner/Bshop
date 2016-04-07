@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <h3>欢迎您登陆</h3>
 	    <br>
 	    <div class="form-group">
-	    	 <div class="input-group input-group-lg">
+	    	 <div class="input-group input-group-lg" style="margin-bottom:9px;">
 		         <span class="input-group-addon"><i class="fa fa-user"></i></span>
 		         <input type="text" class="form-control" name="user.username" placeholder="请输入用户名">
 	         </div>
@@ -44,10 +44,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    
 	      
 	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	      <span type="button" class="btn btn-success" style="margin:0 20px;"><a href="stu_register.jsp">去注册</a></span>
+	      <span type="button" class="btn btn-success" style="padding:5px 20px;margin-left:20px;"><a href="stu_register.jsp">去注册</a></span>
 	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	      <button type="submit" class="btn btn-success btn-de">登 录 </button>
-	    </div>
+	      <button type="submit" class="btn btn-success btn-de" style="padding:5px 20px;margin-left:20px;">登&nbsp;&nbsp;&nbsp;录 </button>
 	    </s:form>
     </main>
   </body>

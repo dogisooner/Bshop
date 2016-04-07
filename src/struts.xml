@@ -25,13 +25,15 @@
 	           <result name="show_bookInfo">/book_info.jsp</result>
 	           <result name="show_edit">/book_edit.jsp</result>
 	           <result name="show_MyBook">/myBookList.jsp</result>
+	           <result name="index">/index.jsp</result> 
 	           <result name="delete_book">/suc_delete.jsp</result>
 	        </action>
 	 </package>
 	  <package name="order" namespace="/order" extends="struts-default">
 	        <action name="order_*" class="orderAction" method="{1}">
 	           <result name="add_order">/suc_addOrder.jsp</result>
-	           <result name="show_view">/order_view.jsp</result>
+	           <result name="show_view">/order_view.jsp</result> 
+	           <result name="detail_view">/order_detail.jsp</result>
 	        </action>
 	  </package>
 </struts>

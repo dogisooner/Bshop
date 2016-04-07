@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebRoot/index.jsp=utf-8
 encoding//WebRoot/stu_edit.jsp=UTF-8
+encoding//src/com/action/BookAction.java=utf-8
+encoding//src/com/dao/BookDao.java=gbk

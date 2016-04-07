@@ -51,6 +51,10 @@ public class BookServiceImpl{
 		Book book=bookDao.GetBookById(id);
 		return book;
 	}
+	public ArrayList<Book> queryBooks(String name){
+		ArrayList<Book> bookList=bookDao.QueryBook(name);
+		return bookList;
+	}
 	//É¾³ýÎÒµÄÊé¼®
 	public void delete(Book book){
 		bookDao.deleteBook(book.getId());

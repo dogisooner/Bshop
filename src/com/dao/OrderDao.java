@@ -22,6 +22,7 @@ public class OrderDao {
 	public void addOrder(Shoporder shoporder) {
 		Session s = factory.getCurrentSession();
 		s.save(shoporder);
+		System.out.println("haha");
 	}
 	// ¸Ä
 	public void updateOrder(Shoporder shoporder) {

@@ -18,19 +18,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
+	<meta http-equiv="Refresh" content="1;url=order/order_showOrder?user.id=${user.id}">
 	<link rel="stylesheet" href="<%=basePath%>css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>css/main.css">
 	<link rel="shortcut icon" href="<%=basePath%>images/icon.png">
+	
  </head> 
 <body> 
     <header>
     <%@include file="menubar.jsp"%>	                
     </header>
                 <h3>订单添加成功</h3>
-                  <div id="showInfo">
-  				      成功下单，2秒后自动跳转至我的订单页面
-				 </div>        
+                  <center>
+  				    自动跳转至我的订单页面
+				 </center>       
                 
 </body>
 </html>

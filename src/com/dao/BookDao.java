@@ -67,7 +67,7 @@ public class BookDao {
 	@SuppressWarnings("unchecked")
 	public ArrayList<Book> QueryBook(String bookname) {
 		Session s = factory.getCurrentSession();
-		String hql = "From User user where 1=1";// 最基本的
+		String hql = "From Book book where 1=1";// 最基本的
 		if (!bookname.equals(""))
 			hql = hql + " and book.bookname like '%" + bookname + "%'";
 		Query q = s.createQuery(hql);
